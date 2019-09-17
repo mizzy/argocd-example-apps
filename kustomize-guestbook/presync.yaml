@@ -4,10 +4,10 @@ metadata:
   name: presync-job
   annotations:
     argocd.argoproj.io/hook: PreSync
-    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
     spec:
+      ttlSecondsAfterFinished: 60
       containers:
       - name: sleep
         image: alpine:latest

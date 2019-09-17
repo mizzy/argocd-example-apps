@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: presync-pod
+  name: presync-pod-
   annotations:
     argocd.argoproj.io/hook: PreSync
 spec:

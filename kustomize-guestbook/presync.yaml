@@ -1,15 +1,12 @@
 apiVersion: batch/v1
-kind: Job
+kind: Pod
 metadata:
-  name: presync-job
+  name: presync-pod
   annotations:
     argocd.argoproj.io/hook: PreSync
-spec:
-  template:
-    spec:
-      containers:
-      - name: sleep
-        image: alpine:latest
-        command: ["sleep", "10"]
-      restartPolicy: Never
-  backoffLimit: 0
+template:
+  spec:
+    containers:
+    - name: sleep
+      image: alpine:latest
+      command: ["sleep", "10"]

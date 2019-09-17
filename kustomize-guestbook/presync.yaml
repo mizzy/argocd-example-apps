@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
   - name: sleep
-    image: alpine:latest
+    image: alpine:3.10.2
     command: ["sleep", "10"]
   restartPolicy: Never

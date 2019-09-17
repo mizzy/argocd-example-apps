@@ -8,6 +8,5 @@ spec:
   containers:
     - name: sleep
       image: alpine:latest
-      command: ["echo"]
-      args: ["foo bar"]
+      command: ["date"]
   restartPolicy: Never

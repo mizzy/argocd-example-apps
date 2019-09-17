@@ -12,4 +12,4 @@ patchesJson6902:
   target:
     version: v1
     kind: Pod
-    name: presync-pod
+    name: presync-pod-

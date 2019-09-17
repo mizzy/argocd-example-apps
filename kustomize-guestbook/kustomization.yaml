@@ -10,7 +10,6 @@ kind: Kustomization
 patchesJson6902:
 - path: patches/job-generate-name.yaml
   target:
-    group: batch
     version: v1
     kind: Pod
     name: presync-pod

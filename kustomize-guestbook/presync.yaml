@@ -4,9 +4,8 @@ metadata:
   name: presync-pod
   annotations:
     argocd.argoproj.io/hook: PreSync
-template:
-  spec:
-    containers:
-    - name: sleep
-      image: alpine:latest
-      command: ["sleep", "10"]
+spec:
+  containers:
+  - name: sleep
+    image: alpine:latest
+    command: ["sleep", "10"]

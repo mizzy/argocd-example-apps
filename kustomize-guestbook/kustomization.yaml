@@ -6,3 +6,11 @@ resources:
 - presync.yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+
+patchesJson6902:
+- path: patches/job-generate-name.yaml
+  target:
+    group: batch
+    version: v1
+    kind: Job
+    name: presync-job

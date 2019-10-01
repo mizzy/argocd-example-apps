@@ -6,10 +6,12 @@ metadata:
     argocd.argoproj.io/hook: PreSync
 spec:
   ttlSecondsAfterFinished: 10
-  entrypoint: whalesay
-  templates:
-  - name: whalesay
-    container:
-      image: docker/whalesay:latest
-      command: [cowsay]
-      args: ["hello world"]
+  template:
+    spec:
+      containers:
+      - name: whalesay
+        image: docker/whalesay:latest
+        command: [cowsay]
+        args: ["hellow world"]
+      restartPolicy: Never
+  backoffLimit: 4

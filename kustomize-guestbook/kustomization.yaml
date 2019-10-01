@@ -14,9 +14,9 @@ patchesJson6902:
     version: v1
     kind: Job
     name: presync-job-
-#- path: patches/job-generate-name.yaml
-#  target:
-#    group: argoproj.io
-#    version: v1alpha1
-#    kind: Workflow
-#    name: gc-ttl-
+- path: patches/job-generate-name.yaml
+  target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Workflow
+    name: gc-ttl-test-

@@ -12,6 +12,6 @@ spec:
       - name: whalesay
         image: docker/whalesay:latest
         command: [cowsay]
-        args: ["hellow world"]
+        args: ["Hi"]
       restartPolicy: Never
   backoffLimit: 4

@@ -23,7 +23,7 @@ metadata:
   annotations:
     argocd.argoproj.io/hook: PreSync
 spec:
-  ttlSecondsAfterFinished: 10
+  ttlSecondsAfterFinished: 60
   entrypoint: whalesay
   templates:
   - name: whalesay

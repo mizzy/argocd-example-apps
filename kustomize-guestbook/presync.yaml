@@ -15,3 +15,17 @@ spec:
         args: ["Hello World"]
       restartPolicy: Never
   backoffLimit: 4
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  name: gc-ttl-
+spec:
+  ttlSecondsAfterFinished: 10
+  entrypoint: whalesay
+  templates:
+  - name: whalesay
+    container:
+      image: docker/whalesay:latest
+      command: [cowsay]
+      args: ["hello world"]
